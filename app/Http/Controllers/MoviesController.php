@@ -36,7 +36,9 @@ class MoviesController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'title' => 'required|max:255'
+            'title' => 'required|max:255',
+            'year' => 'required|integer',
+            'category' => 'required|max:255'
         ]);
         $movies = Movies::create([
             'id' => $request->id,

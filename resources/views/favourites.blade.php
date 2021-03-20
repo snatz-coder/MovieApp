@@ -6,7 +6,6 @@
         <div class=" w-80">
         <table class="table">
             <tr class="p-4">
-                {{-- <td >Id</td> --}}
                 <td >Title</td>
                 <td >Year</td>
                 <td >Category</td>
@@ -14,7 +13,6 @@
             </tr>
             @foreach ($favourites as $favourites)
             <tr class="p-4">
-                {{-- <td >{{$favourites->id}}</td> --}}
                 <td >{{$favourites->title}}</td>
                 <td >{{$favourites->year}}</td>
                 <td >{{$favourites->category}}</td>

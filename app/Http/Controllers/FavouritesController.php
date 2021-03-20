@@ -38,13 +38,23 @@ class FavouritesController extends Controller
     public function store(Request $request)
     {
  
-        
-        $favourites = Favourites::create([
-            'id' => $request->id,
-            'title' => $request->title,
-            'year' => $request->year,
-            'category' => $request->category
+        $validateData = $request->validate([
+            'title' => 'required|max:255',
+            'year' => 'required|integer',
+            'category' => 'required|max:255'
         ]);
+       
+        if (Favourites::where('title', $request->title)->exists()) {
+            return redirect('/')->with('message', 'Already in Favourites');
+        } else {
+            $favourites = Favourites::create([
+                'id' => $request->id,
+                'title' => $request->title,
+                'year' => $request->year,
+                'category' => $request->category
+            ]);
+        }
+        
  
         return redirect('favourites');
     }
