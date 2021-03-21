@@ -12,6 +12,5 @@ class Movies extends Model
     'title',
     'year',
     'category',
-    'completed',
   ];
 }

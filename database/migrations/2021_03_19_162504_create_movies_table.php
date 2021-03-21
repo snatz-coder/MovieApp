@@ -18,7 +18,6 @@ class CreateMoviesTable extends Migration
             $table->string('title');
             $table->integer('year');
             $table->string('category');
-            $table->boolean('completed');
             $table->timestamps();
         });
     }

@@ -44,8 +44,7 @@ class MoviesController extends Controller
             'id' => $request->id,
             'title' => $request->title,
             'year' => $request->year,
-            'category' => $request->category,
-            'completed' => 0
+            'category' => $request->category
         ]);
         return redirect('/');
     }
