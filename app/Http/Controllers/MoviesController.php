@@ -46,7 +46,7 @@ class MoviesController extends Controller
             'year' => $request->year,
             'category' => $request->category
         ]);
-        return redirect('/');
+        return redirect('/')->with('alert', 'Movie added');
     }
 
     /**

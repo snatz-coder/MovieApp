@@ -16,6 +16,7 @@ use App\Http\Controllers\FavouritesController;
 */
 
 Route::get('/', 'App\Http\Controllers\MoviesController@index');
+Route::post('movie', 'App\Http\Controllers\MoviesController@store');
 Route::post('favourites.store/{id}', 'App\Http\Controllers\FavouritesController@store');
 Route::get('favourites', 'App\Http\Controllers\FavouritesController@index');
 Route::get('delete/{id}', 'App\Http\Controllers\FavouritesController@destroy');
